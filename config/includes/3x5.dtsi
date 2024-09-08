@@ -18,10 +18,7 @@
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
 
-// Extra key bindings
-#define SWP_POS LT4 RT4
-
-#include "combos.dtsi"
+// #include "combos.dtsi"
 
 #ifdef MOUSE_KEYS
 #    include "mouse.dtsi"
@@ -88,15 +85,6 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
-
-        // Swapper for smart alt+tab
-        swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-            ignored-key-positions = <SWP_POS>;    //<SWP_POS>; &kp LS(TAB) position
-        };
-
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -105,7 +93,13 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-
+        // sticky key to be used for alt-tab macro
+        sk_at: sk_alttabber {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <500>;
+        };
     };
 
     macros {
@@ -115,7 +109,15 @@
             bindings
                 = <&macro_tap &kp LG(X) &kp U &kp S>;
         )
-
+        ZMK_MACRO(alt_tabber,  // adapted from @moutis on ZMK Discord
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>    // leave ALT down to keep menu up
+                     , <&macro_tap &kp TAB>       // open the menu
+                     , <&macro_pause_for_release> // wait until key release
+                     , <&macro_tap &sk_at RALT>   // start timer to release ALT after timeout
+                     , <&macro_release &kp LALT>; // now release the initial hold
+        )
     };
 
     keymap {
@@ -137,7 +139,7 @@
             display-name = "NUM";
             bindings = <LAYER_FROM38( \
 //           ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-              &kp LBKT,      &kp N7,        &kp N8,        &kp N9,        &kp RBKT,          &ht LA(F4) LC(F4), &kp TAB_LT, &kp TAB_RT,   &swapper,     &kp LS(TAB), \
+              &kp LBKT,      &kp N7,        &kp N8,        &kp N9,        &kp RBKT,          &ht LA(F4) LC(F4), &kp TAB_LT, &kp TAB_RT,   &alt_tabber,   &none, \
               &kp SEMI,      &kp N4,        &kp N5,        &kp N6,        &kp EQUAL,         &to NAV,       &kp LSHFT,     &kp LCTRL,     &kp LALT,      &kp LGUI, \
 &kp ESC,      &kp GRAVE,     &kp N1,        &kp N2,        &kp N3,        &kp BSLH,          &kp LC(Y),     &kp LC(V),     &kp LC(C),     &kp LC(X),     &kp LC(Z),     &kp RET, \
                                             &kp DOT,       &kp N0,        &kp MINUS,         &trans,        &trans,        &trans \
@@ -161,7 +163,7 @@
             display-name = "NAV";
             bindings = <LAYER_FROM38( \
 //           ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-              &kp LS(TAB),   &swapper,      &kp TAB_RT,    &kp TAB_LT,    &ht LA(F4) LC(F4), &kp INS,       &kp HOME,      &kp UP,        &kp END,       &kp PG_UP, \
+              &none,         &alt_tabber,   &kp TAB_RT,    &kp TAB_LT,    &ht LA(F4) LC(F4), &kp INS,       &kp HOME,      &kp UP,        &kp END,       &kp PG_UP, \
               &kp LGUI,      &kp LALT,      &kp LCTRL,     &kp LSHFT,     &to NUM,           &kp CAPS,      &kp LEFT,      &kp DOWN,      &kp RIGHT,     &kp PG_DN, \
 &kp ESC,      &kp LC(Z),     &kp LC(X),     &kp LC(C),     &kp LC(V),     &kp LC(Y),         &kp C_STOP,    &kp C_PREV,    &kp C_NEXT,    &kp C_VOL_UP,  &kp C_VOL_DN,  &kp RET, \
                                             &trans,        &trans,        &trans,            &kp RET,       &kp BSPC,      &kp DEL \
