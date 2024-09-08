@@ -179,7 +179,7 @@
               &msc SCRL_UP,  &msc SCRL_LEFT, &mmv MOVE_UP, &msc SCRL_RIGHT, &kp C_AL_CALC,   &none,         &none,         &none,         &none,         &none, \
               &msc SCRL_DOWN, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &kp K_APP,    &none,         &none,         &none,         &none,         &none, \
 &kp ESC,      &bt BT_CLR_ALL, &bt BT_SEL 0, &bt BT_SEL 1,  &bt BT_SEL 2,  &bt BT_CLR,        &none,         &none,         &none,         &none,         &none,        &kp RET, \
-                                            &trans,        &trans,        &trans,            &mkp RCLK,     &mkp LCLK,     &none \
+                                            &none,         &mkp LCLK,     &mkp RCLK,         &trans,        &trans,        &trans \
 //                                         ╰──────────────┴──────────────┴──────────────╯   ╰──────────────┴──────────────┴──────────────╯
             )>;
         };
