@@ -9,6 +9,7 @@ manifest:
 #      remote: zmkfirmware
 #      revision: main
 #      import: app/west.yml
+# Change to use mouse.dtsi
     - name: zmk
       remote: caksoylar
       revision: caksoylar/zen-8bit
