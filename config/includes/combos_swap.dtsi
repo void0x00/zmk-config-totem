@@ -48,10 +48,10 @@ COMBO(lock,   &kp LG(L),   LT0 RT0,     DEF,          60, 200)
 COMBO(sleep,  &sleep,      LT1 RT1,     DEF,          60, 200)
 
 // calc +-*/.,RET
-COMBO(plus,   &kp PLUS,    RM2 RM1,     NUM,          40, 100)
-COMBO(minus,  &kp MINUS,   RB2 RB1,     NUM,          40, 100)
-COMBO(star,   &kp STAR,    RM2 RB1,     NUM,          40, 150)
-COMBO(slash,  &kp SLASH,   RB2 RM1,     NUM,          40, 150)
+COMBO(plus,   &kp PLUS,    RM1 RM2,     NUM,          40, 100)
+COMBO(minus,  &kp MINUS,   RB1 RB2,     NUM,          40, 100)
+COMBO(star,   &kp STAR,    RM1 RB2,     NUM,          40, 150)
+COMBO(slash,  &kp SLASH,   RM2 RB1,     NUM,          40, 150)
 COMBO(comma,  &kp COMMA,   RM4 RM3,     NUM,          40, 150)
 COMBO(ret,    &kp RET,     RM3 RM2 RM1, NUM,          40,  50)
 
