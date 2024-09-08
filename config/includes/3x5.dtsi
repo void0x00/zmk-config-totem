@@ -18,7 +18,7 @@
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
 
-// #include "combos.dtsi"
+#include "combos.dtsi"
 
 #ifdef MOUSE_KEYS
 #    include "mouse.dtsi"
