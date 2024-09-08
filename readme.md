@@ -32,7 +32,7 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 ## Keymap drawer
 
 Below representation was generated with [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer) using the [automated Github workflow](https://github.com/caksoylar/keymap-drawer/tree/main#setting-up-an-automated-drawing-workflow)
-[`keymap-drawer app`]([keymap-drawer/](https://keymap-drawer.streamlit.app/)).
+[`keymap-drawer app`](https://keymap-drawer.streamlit.app/).
 
 
 ## LED indicators widget
