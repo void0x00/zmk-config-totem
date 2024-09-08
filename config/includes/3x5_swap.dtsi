@@ -154,7 +154,7 @@
               &kp F12,       &kp F7,        &kp F8,        &kp F9,        &kp PSCRN,         &kp LBRC,      &kp AMPS,      &kp ASTRK,     &kp LPAR,      &kp RBRC, \
               &kp F11,       &kp F4,        &kp F5,        &kp F6,        &kp SLCK,          &aml LSHFT PLUS, &aml LCTRL DLLR, &aml LALT PRCNT, &asl LGUI CARET, &kp COLON, \
 &kp ESC,      &kp F10,       &kp F1,        &kp F2,        &kp F3,        &kp PAUSE_BREAK,   &kp PIPE,      &kp EXCL,      &kp AT,        &kp HASH,      &kp TILDE,     &kp RET, \
-                                            &trans,        &trans,        &trans,            &kp UNDER,     &kp RPAR,      &kp LPAR \
+                                            &trans,        &trans,        &trans,            &kp UNDER,     &kp LPAR,      &kp RPAR \
 //                                         ╰──────────────┴──────────────┴──────────────╯   ╰──────────────┴──────────────┴──────────────╯
             )>;
         };
