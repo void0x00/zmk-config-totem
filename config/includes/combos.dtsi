@@ -22,14 +22,14 @@
 // top
 COMBO(at,     &kp AT,      LT3 LT2,     DEF,          40, 150)
 COMBO(hash,   &kp HASH,    LT2 LT1,     DEF,          40, 150)
-COMBO(esc,    &kp ESC,     LT4 LT3,     DEF,          40, 150)
-COMBO(del,    &kp DEL,     RT3 RT4,     DEF,          40, 150)
 
 // middle
 COMBO(lpar,   &kp LPAR,    LM2 LM1,     DEF,          40, 100)
 COMBO(rpar,   &kp RPAR,    RM1 RM2,     DEF,          40, 100)
 COMBO(lbkt,   &kp LBKT,    LM3 LM2,     DEF,          40, 100)
 COMBO(rbkt,   &kp RBKT,    RM2 RM3,     DEF,          40, 100)
+COMBO(esc,    &kp ESC,     LM4 LM3,     DEF,          40, 150)
+COMBO(del,    &kp DEL,     RM3 RM4,     DEF,          40, 150)
 
 
 // bottom
