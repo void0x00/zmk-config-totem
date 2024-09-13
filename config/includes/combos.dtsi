@@ -39,7 +39,7 @@ COMBO(mute,   &kp C_MUTE,  RB4 RB3,     NAV,          40, 100)
 COMBO(plpu,   &kp C_PP,    RB2 RB1,     NAV,          40, 100)
 
 // thumb
-COMBO(dot,    &kp DOT,     LH1 LH0,     NUM,          40, 150)
+// COMBO(dot,    &kp DOT,     LH1 LH0,     NUM,          40, 150)
 
 // cross
 COMBO(capswd, &caps_word,  LM1 RM1,     DEF,          60, 200)
@@ -52,7 +52,8 @@ COMBO(plus,   &kp PLUS,    LM2 LM1,     NUM,          40, 100)
 COMBO(minus,  &kp MINUS,   LB2 LB1,     NUM,          40, 100)
 COMBO(star,   &kp STAR,    LM2 LB1,     NUM,          40, 150)
 COMBO(slash,  &kp SLASH,   LB2 LM1,     NUM,          40, 150)
-COMBO(comma,  &kp COMMA,   LM4 LM3,     NUM,          40, 150)
+COMBO(comma,  &kp COMMA,   LM3 LM1,     NUM,          40, 150)
+COMBO(dot,    &kp DOT,     LB3 LB1,     NUM,          40, 150)
 COMBO(ret,    &kp RET,     LM3 LM2 LM1, NUM,          40,  50)
 
     };
