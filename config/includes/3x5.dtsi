@@ -13,7 +13,7 @@
 #define MSE 4
 
 // shortcut select os
-#defined MAC_OS
+#ifdef MAC_OS
 // homerow mode
   #define M_LSH LSHFT
   #define M_LCT LGUI
@@ -33,7 +33,7 @@
   #define T_LFT LC(LS(TAB))
   #define W_RHT LG(TAB)
   #define W_LFT LG(LS(TAB))
-#elseif
+#else
 // homerow mode
   #define M_LSH LSHFT
   #define M_LCT LCTRL
