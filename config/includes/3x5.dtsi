@@ -165,7 +165,7 @@
 //           ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
               &none,         &alt_tabber,   &kp TAB_RT,    &kp TAB_LT,    &ht LA(F4) LC(F4), &kp INS,       &kp HOME,      &kp UP,        &kp END,       &kp PG_UP, \
               &kp LGUI,      &kp LALT,      &kp LCTRL,     &kp LSHFT,     &to NUM,           &kp CAPS,      &kp LEFT,      &kp DOWN,      &kp RIGHT,     &kp PG_DN, \
-&kp ESC,      &kp LC(Z),     &kp LC(X),     &kp LC(C),     &kp LC(V),     &kp LC(Y),         &kp C_STOP,    &kp C_PREV,    &kp C_NEXT,    &kp C_VOL_UP,  &kp C_VOL_DN,  &kp RET, \
+&kp ESC,      &kp LC(Z),     &kp LC(X),     &kp LC(C),     &kp LC(V),     &kp LC(Y),         &kp C_STOP,    &kp C_PREV,    &kp C_NEXT,    &kp C_VOL_DN,  &kp C_VOL_UP,  &kp RET, \
                                             &trans,        &trans,        &trans,            &kp RET,       &kp BSPC,      &kp DEL \
 //                                         ╰──────────────┴──────────────┴──────────────╯   ╰──────────────┴──────────────┴──────────────╯
             )>;
